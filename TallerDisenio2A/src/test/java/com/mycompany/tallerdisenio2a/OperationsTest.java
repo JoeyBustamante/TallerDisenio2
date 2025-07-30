@@ -16,8 +16,9 @@ import static org.junit.jupiter.api.Assertions.*;
    
 @DisplayName("Tests for the Operations class")
 public class OperationsTest {
-    @DisplayName("Debe generar una fórmula no nula")
+    
     @Test 
+    @DisplayName("Debe generar una fórmula no nula")
     public void notNull(){
         String formulaN = Operations.MakeFormula();
         assertNotNull(formulaN);
@@ -69,22 +70,13 @@ public class OperationsTest {
 
     @Test
     @DisplayName("Prueba de jerarquía de operaciones: 11*11+21+31=173")
-<<<<<<< HEAD
     public void testJerarquia() {
         assertEquals("11*11+21+31=173", Operations.Solve("11*11+21+31"));
     }
-=======
-
-    public void testGerarquia() {
-        assertEquals("11*11+21+31=173", Operations.Solve("11*11+21+31"));
-
-   
->>>>>>> 285edb4216f0225aa0147fe56f495358c973842f
-
+ 
     @Test
     @DisplayName("Prueba de operadores repetidos")
     void testOperadoresRepetidos() {
         assertEquals("10*10*10=1000", Operations.Solve("10*10*10"));
     }
-    
 }
