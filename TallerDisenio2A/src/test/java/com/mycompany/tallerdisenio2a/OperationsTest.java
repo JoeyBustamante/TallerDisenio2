@@ -27,6 +27,9 @@ public class OperationsTest {
     
     @Test 
     public void notNull(){
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         String formulaN = Operations.MakeFormula();
         assertNotNull(formulaN);
@@ -64,6 +67,12 @@ public class OperationsTest {
     void testContieneLosOperadores() {
         String formula = Operations.MakeFormula();
         assertTrue( formula.contains("+") ||  formula.contains("-") ||formula.contains("*") ||   formula.contains("/"));
+    }
+    
+    @DisplayName("Prueba de formula con multiplicacion y suma")
+    @Test
+    void testMultiplicacionYSuma() {
+        assertEquals("10+10=20", Operations.Solve("10+10"));
     }
     
     @DisplayName("Prueba de formula con multiplicacion y suma")
