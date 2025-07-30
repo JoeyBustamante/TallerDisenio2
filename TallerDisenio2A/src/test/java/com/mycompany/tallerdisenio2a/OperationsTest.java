@@ -22,17 +22,17 @@ public class OperationsTest {
         
     }
     
-    
-    public void testSuma(){
-        assertEquals("98+18-62=54",Operations.Solve("98+18"));
-    }
-        
-        
-        
-    
-
     @Test
-    public void testSomeMethod() {
+    public void testSuma(){
+        assertEquals("98+18=116",Operations.Solve("98+18"),"Prueba de suma ");
     }
+    
+    
+    
+    @Test 
+    public void pruebaExcepcionDivisionPor0() {
+        assertThrows(ArithmeticException.class, () -> Operations.Solve("5/0"));
+    }
+        
     
 }
