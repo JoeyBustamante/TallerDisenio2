@@ -27,7 +27,7 @@
     </dependencies>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.release>24</maven.compiler.release>
-        <exec.mainClass>com.mycompany.tallerdisenio2a.TallerDisenio2A</exec.mainClass>
+        <maven.compiler.release>23</maven.compiler.release>
+        <exec.mainClass>com.mycompany.tallerdisenio2a.CalculatorSMP</exec.mainClass>
     </properties>
 </project>
