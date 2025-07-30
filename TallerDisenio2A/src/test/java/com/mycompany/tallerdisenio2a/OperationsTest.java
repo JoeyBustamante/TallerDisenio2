@@ -69,7 +69,7 @@ public class OperationsTest {
 
     @Test
     @DisplayName("Prueba de jerarquía de operaciones: 11*11+21+31=173")
-    public void testGerarquia() {
+    public void testJerarquia() {
         assertEquals("11*11+21+31=173", Operations.Solve("111*11+21+31"));
     }
 
