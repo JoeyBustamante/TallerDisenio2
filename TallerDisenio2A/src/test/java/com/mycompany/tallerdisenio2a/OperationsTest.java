@@ -33,10 +33,10 @@ public class OperationsTest {
     @DisplayName("Prueba de división válida")
     @Test
     public void testDivision(){
-        assertEquals("4/2=2",Operations.Solve("4/2"),"Prueba de división ");
+        assertEquals("24/2=12",Operations.Solve("24/2"),"Prueba de división ");
     }
     
-    @Test 
+    //@Test 
 
     @Test
     @DisplayName("Debe lanzar excepción por división entre cero")
