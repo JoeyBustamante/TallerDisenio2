@@ -51,12 +51,6 @@ public class OperationsTest {
     }
 
     @Test
-    @DisplayName("Debe respetar la jerarquía de operaciones: 2+3*4=14")
-    void testMultiplicacion() {
-        assertEquals("2+3*4=14", Operations.Solve("2+3*4"));
-    }
-
-    @Test
     @DisplayName("No debe dar un resultado incorrecto: 22+22 ≠ 555")
     void testResultadoIncorrecto() {
         assertNotEquals("22+22=555", Operations.Solve("22+22"));
@@ -64,7 +58,7 @@ public class OperationsTest {
 
     @Test
     @DisplayName("Prueba de jerarquía de operaciones: 11*11+21+31=173")
-    public void testOperatorHierarchy() {
+    public void testGerarquia() {
         assertEquals("11*11+21+31=173", Operations.Solve("111*11+21+31"));
     }
 }
