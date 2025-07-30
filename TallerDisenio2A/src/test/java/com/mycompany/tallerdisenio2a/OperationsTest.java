@@ -57,6 +57,11 @@ public class OperationsTest {
         assertNotEquals("2+2=5", Operations.Solve("2+2"));
     }
 
+    @DisplayName("Prueba de jerarquía de operaciones")
+    public void testOperatorHierarchy(){
+        assertEquals("10*10+20+30=150", Operations.Solve("100*100+2+3"));
+    }
+
     
     
     
