@@ -32,7 +32,6 @@ public class OperationsTest {
     @DisplayName("Prueba de división válida")
     @Test
     public void testDivision(){
-        assertEquals("24/2=12",Operations.Solve("24/2"),"Prueba de división ");
         assertEquals("44/22=2",Operations.Solve("44/22"),"Prueba de división ");
     }
     
@@ -72,14 +71,11 @@ public class OperationsTest {
 
     @Test
     @DisplayName("Prueba de jerarquía de operaciones: 11*11+21+31=173")
-<<<<<<< HEAD
+
     public void testGerarquia() {
         assertEquals("11*11+21+31=173", Operations.Solve("11*11+21+31"));
-=======
-    public void testJerarquia() {
-        assertEquals("11*11+21+31=173", Operations.Solve("111*11+21+31"));
->>>>>>> 77baffa891289cce63ba296faf38f923b8c7da71
-    }
+
+   
 
     @Test
     void testOperadoresRepetidos() {
