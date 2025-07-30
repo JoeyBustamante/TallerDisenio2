@@ -30,9 +30,36 @@ public class OperationsTest {
     
     
     @Test 
-    public void pruebaExcepcionDivisionPor0() {
+    public void testExcepcionDivisionPor0() {
         assertThrows(ArithmeticException.class, () -> Operations.Solve("5/0"));
     }
+  
+
+    @Test
+    void testMakeFormulaNoVacio() {
+        String formula = Operations.MakeFormula();
+        assertFalse(formula.isEmpty());
+    }
+
+    @Test
+    void testContieneLosOperadores() {
+        String formula = Operations.MakeFormula();
+        assertTrue(formula.contains("+") || formula.contains("-") || formula.contains("*") || formula.contains("/"));
+    }
+
+    @Test
+    void testMultiplicacion() {
+        assertEquals("2+3*4=14", Operations.Solve("2+3*4")); // Verifica precedencia
+    }
+
+    @Test
+    void testResultadoIncorrecto() {
+        assertNotEquals("2+2=5", Operations.Solve("2+2"));
+    }
+
+    
+    
+    
         
     
 }
