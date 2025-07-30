@@ -27,7 +27,11 @@ public class OperationsTest {
         assertEquals("98+18=116",Operations.Solve("98+18"),"Prueba de suma ");
     }
     
-    
+    @DisplayName("Prueba de división válida")
+    @Test
+    public void testDivision(){
+        assertEquals("4/2=2",Operations.Solve("4/2"),"Prueba de división ");
+    }
     
     @Test 
     public void testExcepcionDivisionPor0() {
