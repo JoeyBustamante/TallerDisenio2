@@ -16,21 +16,9 @@ import static org.junit.jupiter.api.Assertions.*;
    
 @DisplayName("Tests for the Operations class")
 public class OperationsTest {
-<<<<<<< Updated upstream
-
-    @Test
     @DisplayName("Debe generar una fórmula no nula")
-    public void noNull() {
-=======
-    
-    
-    
     @Test 
     public void notNull(){
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
         String formulaN = Operations.MakeFormula();
         assertNotNull(formulaN);
     }
@@ -47,8 +35,6 @@ public class OperationsTest {
         assertEquals("4/2=2",Operations.Solve("4/2"),"Prueba de división ");
     }
     
-    @Test 
-
     @Test
     @DisplayName("Debe lanzar excepción por división entre cero")
     public void testExcepcionDivisionPor0() {
@@ -74,12 +60,6 @@ public class OperationsTest {
     void testMultiplicacionYSuma() {
         assertEquals("10+10=20", Operations.Solve("10+10"));
     }
-    
-    @DisplayName("Prueba de formula con multiplicacion y suma")
-    @Test
-    void testMultiplicacionYSuma() {
-        assertEquals("10+10=20", Operations.Solve("10+10"));
-    }
 
     @Test
     @DisplayName("No debe dar un resultado incorrecto: 22+22 ≠ 555")
@@ -92,17 +72,10 @@ public class OperationsTest {
     public void testGerarquia() {
         assertEquals("11*11+21+31=173", Operations.Solve("111*11+21+31"));
     }
-<<<<<<< Updated upstream
-=======
 
     @Test
     void testOperadoresRepetidos() {
         assertEquals("4*5*2=40", Operations.Solve("4*5*2"));
     }
     
-    
-    
-        
-    
->>>>>>> Stashed changes
 }
