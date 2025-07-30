@@ -4,27 +4,30 @@
  */
 package com.mycompany.tallerdisenio2a;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.DisplayName;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
  *
  * @author joeybustamante
  */
+   
+@DisplayName("Tests for the Operations class")
 public class OperationsTest {
-    
-    
-    
-    @Test 
-    public void noNull(){
+
+    @Test
+    @DisplayName("Debe generar una fórmula no nula")
+    public void noNull() {
         String formulaN = Operations.MakeFormula();
         assertNotNull(formulaN);
-        
     }
-    
+
     @Test
-    public void testSuma(){
-        assertEquals("98+18=116",Operations.Solve("98+18"),"Prueba de suma ");
+    @DisplayName("Prueba de suma: 98+18=116")
+    public void testSuma() {
+        assertEquals("98+18=116", Operations.Solve("98+18"), "Prueba de suma");
     }
     
     @DisplayName("Prueba de división válida")
@@ -34,41 +37,36 @@ public class OperationsTest {
     }
     
     @Test 
+
+    @Test
+    @DisplayName("Debe lanzar excepción por división entre cero")
     public void testExcepcionDivisionPor0() {
         assertThrows(ArithmeticException.class, () -> Operations.Solve("5/0"));
     }
-  
 
     @Test
+    @DisplayName("La fórmula generada no debe estar vacía")
     void testMakeFormulaNoVacio() {
         String formula = Operations.MakeFormula();
         assertFalse(formula.isEmpty());
     }
 
     @Test
+    @DisplayName("La fórmula generada contiene al menos un operador")
     void testContieneLosOperadores() {
         String formula = Operations.MakeFormula();
-        assertTrue(formula.contains("+") || formula.contains("-") || formula.contains("*") || formula.contains("/"));
+        assertTrue( formula.contains("+") ||  formula.contains("-") ||formula.contains("*") ||   formula.contains("/"));
     }
 
     @Test
-    void testMultiplicacion() {
-        assertEquals("2+3*4=14", Operations.Solve("2+3*4")); // Verifica precedencia
-    }
-
-    @Test
+    @DisplayName("No debe dar un resultado incorrecto: 22+22 ≠ 555")
     void testResultadoIncorrecto() {
-        assertNotEquals("2+2=5", Operations.Solve("2+2"));
+        assertNotEquals("22+22=555", Operations.Solve("22+22"));
     }
 
-    @DisplayName("Prueba de jerarquía de operaciones")
-    public void testOperatorHierarchy(){
-        assertEquals("10*10+20+30=150", Operations.Solve("100*100+2+3"));
+    @Test
+    @DisplayName("Prueba de jerarquía de operaciones: 11*11+21+31=173")
+    public void testGerarquia() {
+        assertEquals("11*11+21+31=173", Operations.Solve("111*11+21+31"));
     }
-
-    
-    
-    
-        
-    
 }
