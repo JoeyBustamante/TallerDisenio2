@@ -33,11 +33,10 @@ public class OperationsTest {
     @DisplayName("Prueba de división válida")
     @Test
     public void testDivision(){
-        assertEquals("4/2=2",Operations.Solve("4/2"),"Prueba de división ");
+        assertEquals("44/22=2",Operations.Solve("44/22"),"Prueba de división ");
     }
     
-    @Test 
-
+  
     @Test
     @DisplayName("Debe lanzar excepción por división entre cero")
     public void testExcepcionDivisionPor0() {
@@ -67,6 +66,6 @@ public class OperationsTest {
     @Test
     @DisplayName("Prueba de jerarquía de operaciones: 11*11+21+31=173")
     public void testGerarquia() {
-        assertEquals("11*11+21+31=173", Operations.Solve("111*11+21+31"));
+        assertEquals("11*11+21+31=173", Operations.Solve("11*11+21+31"));
     }
 }
