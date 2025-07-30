@@ -13,8 +13,23 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class OperationsTest {
     
-    public OperationsTest() {
+    
+    
+    @Test 
+    public void noNull(){
+        String formulaN = Operations.MakeFormula();
+        assertNotNull(formulaN);
+        
     }
+    
+    
+    public void testSuma(){
+        assertEquals("98+18-62=54",Operations.Solve("98+18"));
+    }
+        
+        
+        
+    
 
     @Test
     public void testSomeMethod() {
