@@ -16,10 +16,9 @@ import static org.junit.jupiter.api.Assertions.*;
    
 @DisplayName("Tests for the Operations class")
 public class OperationsTest {
-
-    @Test
     @DisplayName("Debe generar una fórmula no nula")
-    public void noNull() {
+    @Test 
+    public void notNull(){
         String formulaN = Operations.MakeFormula();
         assertNotNull(formulaN);
     }
@@ -57,6 +56,12 @@ public class OperationsTest {
         String formula = Operations.MakeFormula();
         assertTrue( formula.contains("+") ||  formula.contains("-") ||formula.contains("*") ||   formula.contains("/"));
     }
+    
+    @DisplayName("Prueba de formula con multiplicacion y suma")
+    @Test
+    void testMultiplicacionYSuma() {
+        assertEquals("10+10=20", Operations.Solve("10+10"));
+    }
 
     @Test
     @DisplayName("No debe dar un resultado incorrecto: 22+22 ≠ 555")
@@ -69,4 +74,10 @@ public class OperationsTest {
     public void testGerarquia() {
         assertEquals("11*11+21+31=173", Operations.Solve("111*11+21+31"));
     }
+
+    @Test
+    void testOperadoresRepetidos() {
+        assertEquals("4*5*2=40", Operations.Solve("4*5*2"));
+    }
+    
 }
